@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+
+<table>
+    <th>
+        <td>Symbol</td>
+        <td>Name</td>
+        <td>Price</td>
+    </th>
+    <tbody>
+        <tr>
+            <td>{{ symbol }}</td>
+            <td>{{ name }}</td>
+            <td>{{ price | usd }}</td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}
