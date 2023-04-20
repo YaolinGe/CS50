@@ -27,3 +27,14 @@
     print("Variable x is not defined")
     sys.exit(1)
   ```
+
+## Week 4, Django
+`django-admin startproject test` to start a new project.
+`python manage.py runserver` will launch the web application.
+`python manage.py startapp hello` to start an app.
+- add `hello` to settings.py
+```python
+from django.http import HttpResponse
+def index(request):
+  return HttpResponse("Hello world")
+```
