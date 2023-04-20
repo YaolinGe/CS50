@@ -1,0 +1,24 @@
+# 
+
+3 pages
+- main search
+    - links on the upper right to other two searches
+    - type query in the search box, click search
+    - search bar centered with rounded corners
+    - search button centered, beneath search bar
+    - I am feeling lucky button
+- image search
+    - link on the upper right to main search
+    - type query in the search box, click search    
+- advanced search
+    - link on the upper right to main search
+    - find pages with
+        - all these words
+        - this exact word or phrase
+        - any of these words
+        - none of these words
+    - stacked vertically, text fields left aligned
+    - search button blue, white text, centered, beneath search fields
+
+
+

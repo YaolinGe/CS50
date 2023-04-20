@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="main">
-    <div class="header">
-        <div class="links">
-            <a href="image.html">Image Search</a>
-            <a href="advanced.html">Advanced Search</a>
-        </div>
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/726d0c0494.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="links">
+      <a href="image.html">Images</a>
+      <a href="advanced.html">Advanced Search</a>
     </div>
-    <div class="search-container">
+    
+    <!-- <div class="logo">
+        <img src="google.png" alt="Google" width="300">
+    </div> -->
+
+    <div class="search">
         <form action="https://www.google.com/search">
-            <input type="text" name="q" class="search-input">
-            <input type="submit" value="Google Search" class="search-button">
-            <input type="submit" value="I'm Feeling Lucky" name="btnI" class="feeling-lucky-button">
-            
-        </form>
+            <div class="search-bar">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input type="text" name="q">
+            </div>
+            <div>
+              <input type="submit" value="Google Search">
+              <input type="button" value="I'm Feeling Lucky" id="feeling-lucky" onclick="window.location='https://www.google.com/doodles/'">
+            </div>
+          </form>
     </div>
-    </body>
+  </body>
 </html>
