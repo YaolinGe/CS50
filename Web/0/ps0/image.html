@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Image Search</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="image">
-        <div class="header">
-            <div class="links">
-                <a href="index.html">Main Search</a>
-                <a href="advanced.html">Advanced Search</a>
-            </div>
-        </div>
-        <div class="search-container">
-            <form action="https://www.google.com/search" method="GET">
+  <head>
+    <title>Image Search</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/726d0c0494.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="links">
+      <a href="index.html">Main Search</a>
+      <a href="advanced.html">Advanced Search</a>
+    </div>
+    
+    <div class="logo">
+        <img src="logo_image.png" alt="image" width="150">
+    </div>
+
+    <div class="search_image">
+        <form action="https://www.google.com/search">
+            <div class="search_bar_image">
+                <i class="fa fa-search" aria-hidden="true"></i>
                 <input type="text" name="tbm" value="isch" hidden>
                 <input type="text" name="q" class="search-input">
-                <input type="submit" value="Google Image Search" class="search-button">
-            </form>
-        </div>
-    </body>
+            </div>
+            <div>
+              <input type="submit" value="Google Image Search" class="img_button" style="width: 150px; height: 30px;">
+            </div>
+          </form>
+    </div>
+  </body>
 </html>

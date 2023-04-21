@@ -1,5 +1,12 @@
 body {
-  background-color: #202124;
+  background-color: white;
+}
+
+.logo {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .search {
@@ -19,12 +26,15 @@ body {
 .search-bar {
   width: 500px;
   height: 50px;
+
   background-color: white;
   border-radius: 50px;
   display: flex;
   align-items: center;
   padding: 10px;
   margin: 10px;
+  border-style: solid;
+  border-width: 1px;
   /* border: none;  */
 }
 
@@ -56,15 +66,6 @@ body {
   margin: 10px;
 }
 
-/* input[type=text] {
-  border-radius: 100px;
-  width: 500px;
-  height: 30px;
-  font-size: 12px;
-  font-family: arial, sans-serif;
-  margin: 10px;
-} */
-
 input[type="text"]::before{
   content: "Search";
   color: #202124;
@@ -90,4 +91,112 @@ input[type=button]{
   width: 120px;
   height: 30px;
   border: none;
+}
+
+
+
+.search_image {
+  /* center and round corners */
+  margin: 0 auto;
+  border-radius: 5px;
+  text-align: center;
+  /* vertically centered */
+  /* background-color: black; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* add border to search bar */
+.search_bar_image {
+  width: 500px;
+  height: 50px;
+
+  background-color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border-style: solid;
+  border-width: 1px;
+  /* border: none;  */
+}
+
+.search_bar_image > i {
+  font-size: 20px;
+  /* color: #202124; */
+  margin: 10px;
+}
+
+.search_bar_image > input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.img_button {
+  border-radius: 5px;
+  border: none;
+  font-size: 12px;
+  font-family: arial, sans-serif;
+  /* background-color: blue; */
+}
+
+.advanced_title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  color: #FF7F50;
+  text-align: center;
+  font-size: 15px;
+  font-family: aeria, sans-serif;
+  font-weight: 100;
+}
+
+.advanced_search {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  margin: 10px;
+  /* background-color: grey; */
+  text-align: center;
+  font-size: 15px;
+  font-family: aeria, sans-serif;
+  font-weight: 100;
+}
+
+label {
+  color: #202124;
+  font-size: 12px;
+  font-family: arial, sans-serif;
+  text-align: left;
+  float: left;
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  
+  /* background-color: blue; */
+}
+
+input[type=text].avai {
+  width: 150px;
+  height: 30px;
+  margin: 10px;
+  text-align: left;
+  border: solid;
+  /* background-color: red; */
+}
+
+input[type=submit].avai {
+  background-color: blue;
+  color: white;
+  font-size: 12px;
+  
 }
