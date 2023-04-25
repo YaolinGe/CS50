@@ -1,0 +1,8 @@
+
+{% for question in latest_question_list %}
+    {{ forloop.counter }} # starting index 1
+    {{ forloop.counter0 }} # starting index 0
+
+    # do your stuff
+    <p>{{forloop.counter}}</p>
+{% endfor %}
