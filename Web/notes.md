@@ -39,6 +39,8 @@
 - `python manage.py sqlmigrate projectname 0001` to see the sql code that will be executed.
 - `python manage.py migrate` to apply the migration every time you change the model.
 - loose coupling for the model and the view.
-- `urls.py` specifies the mapping between the url and the view. Thus it is good to use a loose coupling in case if we need to upgrade the url later. 
+- `urls.py` specifies the mapping between the url and the view. Thus it is good to use a loose coupling in case if we need to upgrade the url later. ]
+- `python manage.py test polls` to run the test.
+
 
 
