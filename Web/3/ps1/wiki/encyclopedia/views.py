@@ -8,29 +8,43 @@ def index(request):
         "entries": util.list_entries()
     })
 
-def wiki(request):
-    return render(request, "encyclopedia/wiki.html", {
-        "entries": util.list_entries()
-    })
-
-def css(request):
-    if util.get_entry("CSS"):
-        text = markdown2.markdown(util.get_entry("CSS"))
-        is_header = text.find("<h1>")
-        ie_header = text.find("</h1>")
-        header = text[is_header+4:ie_header]
-        is_content = text.find("<p>")
-        ie_content = text.find("</p>")
-        content = text[is_content+3:ie_content]
-    
-        return render(request, "encyclopedia/entry.html", {
-            "header": header,
-            "content": content,
+def page(request, title):
+    entries = util.list_entries()
+    ENTRIES = [entry.upper() for entry in entries]
+    if title.upper() in ENTRIES:
+        content = markdown2.markdown(util.get_entry(title))
+        return render(request, "encyclopedia/page.html", {
+            "title": title,
+            "content": content
         })
     else:
-        pass
-
-# def entry(request, title):
-#     return render(request, "encyclopedia/entry.html", {
-#         "entry": util.get_entry(title)
-#     })
+        return render(request, "encyclopedia/error.html", {
+            "title": title
+        })
+    
+def search(request):
+    query = request.GET.get('q')
+    entries = util.list_entries()
+    ENTRIES = [entry.upper() for entry in entries]
+    if query.upper() in ENTRIES:
+        content = markdown2.markdown(util.get_entry(query))
+        return render(request, "encyclopedia/page.html", {
+            "title": query,
+            "content": content
+        })
+    else:
+        for entry in entries:
+            if query.upper() == entry.upper():
+                content = markdown2.markdown(util.get_entry(entry))
+                return render(request, "encyclopedia/page.html", {
+                    "title": entry,
+                    "content": content
+                })
+        results = []
+        for entry in entries:
+            if query.upper() in entry.upper():
+                results.append(entry)
+        return render(request, "encyclopedia/search.html", {
+            "query": query,
+            "results": results
+        })

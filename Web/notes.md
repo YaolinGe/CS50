@@ -41,6 +41,9 @@
 - loose coupling for the model and the view.
 - `urls.py` specifies the mapping between the url and the view. Thus it is good to use a loose coupling in case if we need to upgrade the url later. ]
 - `python manage.py test polls` to run the test.
-
+- `app/static/app/style.css` is the default location for static files, to avoid conflict with other apps.
+- `{% url 'app:view_func' args %}` to create a url in the template, where `args` is the argument for the view function.
+- `<a href="{% url 'item_detail' item.pk %}">{{ item.title }}</a>` to create a link in the template.
+- check static link in the template: `{% load static %} <img src="{% static 'app/img.png' %}" alt="My image">`
 
 
