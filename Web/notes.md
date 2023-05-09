@@ -45,5 +45,5 @@
 - `{% url 'app:view_func' args %}` to create a url in the template, where `args` is the argument for the view function.
 - `<a href="{% url 'item_detail' item.pk %}">{{ item.title }}</a>` to create a link in the template.
 - check static link in the template: `{% load static %} <img src="{% static 'app/img.png' %}" alt="My image">`
-
+- `<textarea></textarea>` should always be in the same line to avoid issues.
 

@@ -15,7 +15,21 @@ h1 {
 textarea {
     height: 90vh;
     width: 80%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    white-space: pre-wrap;
+    text-indent: 0;
+    overflow-y: auto;
+    text-align: left;
+    line-height: 1;
 }
+
+textarea:focus {
+    outline: none;
+    text-indent: 0;
+    caret-color: black; /* to change the color of the cursor to black */
+  }
 
 .main {
     padding: 10px;

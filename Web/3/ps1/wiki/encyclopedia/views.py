@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import markdown2
+import random
 from . import util
 
 
@@ -73,8 +74,8 @@ def create(request):
 
 def edit(request, title):
     if request.method == "POST":
-        title = request.POST.get('title')
         content = request.POST.get('content')
+        print(content)
         util.save_entry(title, content)
         content = markdown2.markdown(util.get_entry(title))
         return render(request, "encyclopedia/page.html", {
@@ -82,12 +83,20 @@ def edit(request, title):
             "content": content
         })
     else:
-        # title = request.GET.get('title')
-        content = markdown2.markdown(util.get_entry(title))
+        content = util.get_entry(title)
         return render(request, "encyclopedia/edit.html", {
             "title": title,
             "content": content
         })
+    
+def rpage(request):
+    entries = util.list_entries()
+    title = random.choice(entries)
+    content = markdown2.markdown(util.get_entry(title))
+    return render(request, "encyclopedia/page.html", {
+        "title": title,
+        "content": content
+    })
 
 def test(request):
     return HttpResponse("Hello, world. You're at the polls index.")

@@ -6,12 +6,14 @@
 
 {% block body %}
     {% if exists %}
-        <h1>Page already exists</h1>
-        <p>Sorry, {{title}} does exist at <a href="/wiki/{{title}}">{{title}}</p>
+        <h1><a href="/wiki/{{title}}">{{title}}</a> already exists</h1>
     {% endif %}
     
     {% if not exists %}
         <h1>Page not found</h1>
         <p>Sorry, {{title}} does not exist.</p>
+        <div>
+            <a href="{% url 'create' %}">Create {{title}}</a>
+        </div>
     {% endif %}
 {% endblock %}
