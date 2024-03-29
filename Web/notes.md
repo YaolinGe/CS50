@@ -4,7 +4,7 @@
 - `?field=value&field2=value2` is a query string
 
 
-## Week 3, Python
+## Week 2, Python
 - `f"here comes {name}"`, use f string to speed up the printing process.
 - decorator is a powerful tool
   ```
@@ -28,7 +28,7 @@
     sys.exit(1)
   ```
 
-## Week 4, Django
+## Week 3, Django
 - `django-admin startproject test` to start a new project.
 - `python manage.py runserver` will launch the web application.
 - `python manage.py startapp hello` to start an app.
@@ -47,3 +47,13 @@
 - check static link in the template: `{% load static %} <img src="{% static 'app/img.png' %}" alt="My image">`
 - `<textarea></textarea>` should always be in the same line to avoid issues.
 
+# Week 4, SQL
+- Constraints
+  * `NOT NULL` makes sure the value is not null
+  * `UNIQUE` makes sure the value is unique
+  * `PRIMARY KEY` makes sure the value is unique and not null
+  * `FOREIGN KEY` makes sure the value is a valid value in another table
+  * `CHECK` makes sure the value satisfies a boolean expression
+- `mode columns` 
+- `.headers yes` to show the headers
+- `.mode column` to show the columns

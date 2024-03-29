@@ -1,20 +1,19 @@
-# Notes for CS50 Python 
+# Notes for CS50 Python
 
-## Week 0, Intro
 ## Week 0, Intro
 - `name.strip()` removes the whitespace at the beginning and end of the string.
 - `name.title()` capitalizes the first letter of each word in the string.
 - `"hello, \" world \" "` is a string that includes the quotation marks.
-- `match` can be used to switch between cases in python 
+- `match` can be used to switch between cases in python
    ```
   name = input("What's your name? ")
 
-  match name: 
+  match name:
       case "Harry":
           print("Gryffindor")
       case "Hermione":
           print("Gryffindor")
-      case "Ron": 
+      case "Ron":
           print("Gryffindor")
       case "Draco":
           print("Slytherin")
@@ -24,7 +23,7 @@
 - `for _ in range(5):` is a way to loop 5 times, `_` is a placeholder for the variable, no effect on the loop.
 
 
-!!! For unittest, the folder structure should be like this: 
+!!! For unittest, the folder structure should be like this:
 ```
 - src
     - num.py
@@ -53,5 +52,3 @@ else:
 - `raise` can be used to raise exceptions
 - `finally` can be used to execute code regardless of whether an exception is raised or not
 - `assert` can be used to check if a condition is true, if not, raise an `AssertionError`
-
-
