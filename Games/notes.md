@@ -8,3 +8,8 @@
 
 ## Game collision detection 
 - `AABB` collision detection is the simplest form of collision detection. It checks if two rectangles are overlapping.
+
+
+# Resources 
+- [GamesPattern](https://gameprogrammingpatterns.com/)
+- [RPG](https://howtomakeanrpg.com/)
